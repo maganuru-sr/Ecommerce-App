@@ -1,4 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import {
+  Link,
+  useNavigate,
+} from "react-router-dom";
 
 function Navbar({ cartCount }) {
 
@@ -50,12 +53,23 @@ function Navbar({ cartCount }) {
 
         ) : (
 
-          <Link
-            to="/login"
-            className="bg-white text-black px-4 py-2 rounded"
-          >
-            Login
-          </Link>
+          <>
+
+            <Link
+              to="/login"
+              className="bg-white text-black px-4 py-2 rounded"
+            >
+              Login
+            </Link>
+
+            <Link
+              to="/register"
+              className="bg-green-500 text-white px-4 py-2 rounded"
+            >
+              Register
+            </Link>
+
+          </>
 
         )}
 
