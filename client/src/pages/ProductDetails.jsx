@@ -29,7 +29,7 @@ function ProductDetails() {
     try {
 
       const response = await axios.get(
-        "http://localhost:5000/api/products"
+        "https://ecommerce-app-3c91.onrender.com/api/products"
       );
 
       const foundProduct = response.data.find(

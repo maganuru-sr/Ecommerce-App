@@ -29,7 +29,7 @@ function Admin() {
     try {
 
       const response = await axios.get(
-        "http://localhost:5000/api/products"
+        "https://ecommerce-app-3c91.onrender.com/api/products"
       );
 
       setProducts(response.data);
@@ -47,7 +47,7 @@ function Admin() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/products",
+        "https://ecommerce-app-3c91.onrender.com/api/products",
         {
           name,
           price,
@@ -58,9 +58,7 @@ function Admin() {
         }
       );
 
-      toast.success(
-        "Product Added"
-      );
+      toast.success("Product Added");
 
       fetchProducts();
 
@@ -82,12 +80,10 @@ function Admin() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/products/${id}`
+        `https://ecommerce-app-3c91.onrender.com/api/products/${id}`
       );
 
-      toast.success(
-        "Product Deleted"
-      );
+      toast.success("Product Deleted");
 
       fetchProducts();
 
@@ -104,7 +100,6 @@ function Admin() {
         Admin Dashboard
       </h1>
 
-      {/* Add Product Form */}
       <form
         onSubmit={addProduct}
         className="bg-white p-6 rounded-lg shadow-lg mb-10"
@@ -187,7 +182,6 @@ function Admin() {
 
       </form>
 
-      {/* Products List */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         {products.map((product) => (

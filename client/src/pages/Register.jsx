@@ -24,7 +24,7 @@ function Register() {
 
       const response = await axios.post(
 
-        "http://localhost:5000/api/auth/register",
+        "https://ecommerce-app-3c91.onrender.com/api/auth/register",
 
         {
           name,
